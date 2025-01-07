@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar Bhati - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: auto;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+        }
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin: 20px 0;
+            padding: 10px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+            cursor: pointer;
+        }
+        .skills, .experience, .education, .projects {
+            margin: 15px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: none; /* Hide lists initially */
+        }
+        li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown-container ul {
+            margin-left: 20px;
+        }
+        .active {
+            display: block; /* Show the dropdown */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Profile Image -->
+        <img src="https://raw.githubusercontent.com/sachinbhatiskb/Resume/main/Sachin%20Bhati.jpg.png" alt="Profile Picture" class="profile-image">
+        <h1>Sachin Kumar Bhati</h1>
+        <p class="contact-info">Noida, UP | 7011069628 | Sachinbhatiskb@gmail.com | GitHub: sachinbhatiskb</p>
+    </header>
+
+    <section class="summary">
+        <h2 onclick="toggleDropdown('summary-list')">Summary</h2>
+        <div id="summary-list" class="dropdown-container">
+            <ul>
+                <li>A results-driven software developer skilled in Java, Spring Boot, Murex, TIBCO, and cloud technologies.</li>
+                <li>Expertise in real-time and batch processing, data integration, technical and business analysis, and problem-solving.</li>
+                <li>Experienced in Agile environments and AWS cloud deployments.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2 onclick="toggleDropdown('skills-list')">Skills</h2>
+        <div id="skills-list" class="dropdown-container">
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, C++</li>
+                <li><strong>Frameworks:</strong> Spring Boot, Django</li>
+                <li><strong>Tools:</strong> TIBCO, Murex, AWS, Jenkins, Docker, Git</li>
+                <li><strong>Databases:</strong> SQL, MySQL, PostgreSQL, MongoDB</li>
+                <li><strong>Other:</strong> Real-Time Processing, RESTful APIs, XML, CI/CD, Business & Technical Analysis, Critical Thinking</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2 onclick="toggleDropdown('experience-list')">Experience</h2>
+        <div id="experience-list" class="dropdown-container">
+            <ul>
+                <li><strong>Software Engineer Analyst | Accenture — Noida, UP (Nov 2024 – Present)</strong></li>
+                <ul>
+                    <li>Lead Java and Spring Boot development for banking applications.</li>
+                    <li>Integrated Murex and used TIBCO for system interoperability.</li>
+                    <li>Optimized SQL data integration for real-time financial transactions.</li>
+                    <li>Supported AWS cloud deployments and participated in CI/CD automation.</li>
+                </ul>
+                
+                <li><strong>Associate Software Engineer | Accenture — Noida, UP (Nov 2022 – Nov 2024)</strong></li>
+                <ul>
+                    <li>Completed Java Application Developer training with Spring and CI/CD.</li>
+                    <li>Contributed to RESTful API development for banking systems.</li>
+                    <li>Integrated Murex for financial transaction processing.</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <section class="education">
+        <h2 onclick="toggleDropdown('education-list')">Education</h2>
+        <div id="education-list" class="dropdown-container">
+            <ul>
+                <li><strong>B. Tech in Information Technology | Noida Institute of Engineering and Technology</strong></li>
+                <ul>
+                    <li>Graduated with 7.6 GPA.</li>
+                    <li>Awarded 2nd place in Nirmaan for creative thinking.</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2 onclick="toggleDropdown('projects-list')">Projects</h2>
+        <div id="projects-list" class="dropdown-container">
+            <ul>
+                <li><strong>BANCO SABADELL PROJECT</strong></li>
+                <ul>
+                    <li>Provided technical support for Murex and integrated SQL for data synchronization.</li>
+                    <li>Worked on real-time batch processing for banking systems.</li>
+                    <li>Performed Java development and optimized workflows.</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Languages: Fluent in English, Basic proficiency in Hindi</p>
+    </footer>
+
+    <!-- JavaScript to toggle dropdown visibility -->
+    <script>
+        function toggleDropdown(id) {
+            var element = document.getElementById(id);
+            // Toggle 'active' class to show or hide the dropdown content
+            if (element.style.display === "block") {
+                element.style.display = "none";
+            } else {
+                element.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

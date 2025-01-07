@@ -47,17 +47,22 @@
             font-size: 20px;
             margin-bottom: 10px;
             color: #333;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 0;
+            transition: 0.3s;
         }
-        .skills, .experience, .education, .projects {
-            margin: 15px 0;
+        h2:hover {
+            background-color: #ccc;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-left: 20px;
-        }
-        li {
-            margin: 5px 0;
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            border-left: 3px solid #007bff;
         }
         footer {
             text-align: center;
@@ -71,77 +76,108 @@
 </head>
 <body>
     <header>
-        <!-- Profile Image -->
         <img src="https://raw.githubusercontent.com/sachinbhatiskb/Resume/main/Sachin%20Kumar%20Bhati.jpg" alt="Profile Picture" class="profile-image">
         <h1>Sachin Kumar Bhati</h1>
         <p class="contact-info">Noida, UP | 7011069628 | Sachinbhatiskb@gmail.com | GitHub: sachinbhatiskb</p>
     </header>
 
-    <section class="summary">
-        <h2>Summary</h2>
-        <ul>
-            <li>A results-driven software developer skilled in Java, Spring Boot, Murex, TIBCO, and cloud technologies.</li>
-            <li>Expertise in real-time and batch processing, data integration, technical and business analysis, and problem-solving.</li>
-            <li>Experienced in Agile environments and AWS cloud deployments.</li>
-        </ul>
+    <section id="summary">
+        <h2 class="toggle-btn">Summary</h2>
+        <div class="content">
+            <ul>
+                <li>A results-driven software developer skilled in Java, Spring Boot, Murex, TIBCO, and cloud technologies.</li>
+                <li>Expertise in real-time and batch processing, data integration, technical and business analysis, and problem-solving.</li>
+                <li>Experienced in Agile environments and AWS cloud deployments.</li>
+            </ul>
+        </div>
     </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> Java, Python, C++</li>
-            <li><strong>Frameworks:</strong> Spring Boot, Django</li>
-            <li><strong>Tools:</strong> TIBCO, Murex, AWS, Jenkins, Docker, Git</li>
-            <li><strong>Databases:</strong> SQL, MySQL, PostgreSQL, MongoDB</li>
-            <li><strong>Other:</strong> Real-Time Processing, RESTful APIs, XML, CI/CD, Business & Technical Analysis, Critical Thinking</li>
-        </ul>
+    <section id="skills">
+        <h2 class="toggle-btn">Skills</h2>
+        <div class="content">
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, C++</li>
+                <li><strong>Frameworks:</strong> Spring Boot, Django</li>
+                <li><strong>Tools:</strong> TIBCO, Murex, AWS, Jenkins, Docker, Git</li>
+                <li><strong>Databases:</strong> SQL, MySQL, PostgreSQL, MongoDB</li>
+                <li><strong>Other:</strong> Real-Time Processing, RESTful APIs, XML, CI/CD, Business & Technical Analysis, Critical Thinking</li>
+            </ul>
+        </div>
     </section>
 
-    <section class="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Software Engineer Analyst | Accenture — Noida, UP (Nov 2024 – Present)</strong></li>
+    <section id="experience">
+        <h2 class="toggle-btn">Experience</h2>
+        <div class="content">
             <ul>
-                <li>Lead Java and Spring Boot development for banking applications.</li>
-                <li>Integrated Murex and used TIBCO for system interoperability.</li>
-                <li>Optimized SQL data integration for real-time financial transactions.</li>
-                <li>Supported AWS cloud deployments and participated in CI/CD automation.</li>
+                <li><strong>Software Engineer Analyst | Accenture — Noida, UP (Nov 2024 – Present)</strong></li>
+                <ul>
+                    <li>Lead Java and Spring Boot development for banking applications.</li>
+                    <li>Integrated Murex and used TIBCO for system interoperability.</li>
+                    <li>Optimized SQL data integration for real-time financial transactions.</li>
+                    <li>Supported AWS cloud deployments and participated in CI/CD automation.</li>
+                </ul>
+                
+                <li><strong>Associate Software Engineer | Accenture — Noida, UP (Nov 2022 – Nov 2024)</strong></li>
+                <ul>
+                    <li>Completed Java Application Developer training with Spring and CI/CD.</li>
+                    <li>Contributed to RESTful API development for banking systems.</li>
+                    <li>Integrated Murex for financial transaction processing.</li>
+                </ul>
             </ul>
-            
-            <li><strong>Associate Software Engineer | Accenture — Noida, UP (Nov 2022 – Nov 2024)</strong></li>
-            <ul>
-                <li>Completed Java Application Developer training with Spring and CI/CD.</li>
-                <li>Contributed to RESTful API development for banking systems.</li>
-                <li>Integrated Murex for financial transaction processing.</li>
-            </ul>
-        </ul>
+        </div>
     </section>
 
-    <section class="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>B. Tech in Information Technology | Noida Institute of Engineering and Technology</strong></li>
+    <section id="education">
+        <h2 class="toggle-btn">Education</h2>
+        <div class="content">
             <ul>
-                <li>Graduated with 7.6 GPA.</li>
-                <li>Awarded 2nd place in Nirmaan for creative thinking.</li>
+                <li><strong>B. Tech in Information Technology | Noida Institute of Engineering and Technology</strong></li>
+                <ul>
+                    <li>Graduated with 7.6 GPA.</li>
+                    <li>Awarded 2nd place in Nirmaan for creative thinking.</li>
+                </ul>
             </ul>
-        </ul>
+        </div>
     </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>BANCO SABADELL PROJECT</strong></li>
+    <section id="projects">
+        <h2 class="toggle-btn">Projects</h2>
+        <div class="content">
             <ul>
-                <li>Provided technical support for Murex and integrated SQL for data synchronization.</li>
-                <li>Worked on real-time batch processing for banking systems.</li>
-                <li>Performed Java development and optimized workflows.</li>
+                <li><strong>BANCO SABADELL PROJECT</strong></li>
+                <ul>
+                    <li>Provided technical support for Murex and integrated SQL for data synchronization.</li>
+                    <li>Worked on real-time batch processing for banking systems.</li>
+                    <li>Performed Java development and optimized workflows.</li>
+                </ul>
             </ul>
-        </ul>
+        </div>
     </section>
 
     <footer>
         <p>Languages: Fluent in English, Basic proficiency in Hindi</p>
     </footer>
+
+    <script>
+        // JavaScript to handle accordion-like expansion and collapse
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all toggle buttons (headers)
+            var toggleBtns = document.querySelectorAll('.toggle-btn');
+            
+            // Add event listener to each button
+            toggleBtns.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var content = button.nextElementSibling;  // Get the content below the clicked button
+                    
+                    // Toggle visibility of the content
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';  // Hide content
+                    } else {
+                        content.style.display = 'block';  // Show content
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
